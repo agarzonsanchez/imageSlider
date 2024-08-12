@@ -42,10 +42,14 @@ export default function ImageSlider({ url, limit, page }) {
     return <h1>Loading</h1>;
   }
   return (
-    <div>
-      <div>
+    <div className="full-container">
+      <div className="container-image">
         <div>
-          <button onClick={incrementDecrementHandler} name="decrement">
+          <button
+            className="image-slider-button"
+            onClick={incrementDecrementHandler}
+            name="decrement"
+          >
             &lt;
           </button>
         </div>
@@ -54,6 +58,7 @@ export default function ImageSlider({ url, limit, page }) {
             ? dataItem.map((item, index) =>
                 index === counter ? (
                   <img
+                    key={item.id}
                     src={item.download_url}
                     alt={item.id}
                     className="image-style"
@@ -64,7 +69,11 @@ export default function ImageSlider({ url, limit, page }) {
         </div>
 
         <div>
-          <button onClick={incrementDecrementHandler} name="increment">
+          <button
+            className="image-slider-button"
+            onClick={incrementDecrementHandler}
+            name="increment"
+          >
             &gt;
           </button>
         </div>
@@ -73,7 +82,11 @@ export default function ImageSlider({ url, limit, page }) {
       <div>
         {dataItem && dataItem.length > 0
           ? dataItem.map((item, index) => (
-              <button onClick={() => handlerNumericButtons(index)}>
+              <button
+                className="numeric-buttons"
+                key={index}
+                onClick={() => handlerNumericButtons(index)}
+              >
                 {index + 1}
               </button>
             ))

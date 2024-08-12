@@ -1,4 +1,39 @@
-.image-style{
+.container-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
 
-    width:300px;
+.image-style {
+  width: 300px;
+  box-shadow: 5px 5px 5px #2a403d;
+}
+
+.image-slider-button {
+  margin: 20px;
+  background-color: #d05663;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bolder;
+  box-shadow: 5px 5px 5px #2a403d;
+}
+
+.numeric-buttons:hover,
+.image-slider-button:hover {
+  background-color: #c3cbd6;
+  cursor: pointer;
+}
+
+.numeric-buttons {
+  margin-left: 5px;
+  background-color: #d05663;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bolder;
 }
