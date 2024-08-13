@@ -57,12 +57,18 @@ export default function ImageSlider({ url, limit, page }) {
           {dataItem && 0 < dataItem.length
             ? dataItem.map((item, index) =>
                 index === counter ? (
-                  <img
-                    key={item.id}
-                    src={item.download_url}
-                    alt={item.id}
-                    className="image-style"
-                  />
+                  <div key={item.id} className="image-style">
+                    <img
+                      src={item.download_url}
+                      alt={item.id}
+                      style={{ width: "300px" }}
+                    />
+                    <div>
+                      <p className="description-author">
+                        Author: {item.author}
+                      </p>
+                    </div>
+                  </div>
                 ) : null
               )
             : null}

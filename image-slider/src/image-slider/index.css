@@ -8,7 +8,11 @@
 
 .image-style {
   width: 300px;
-  box-shadow: 5px 5px 5px #2a403d;
+  /* box-shadow: 5px 5px 5px #2a403d; */
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #2a403d;
+  background-color: #2a403d;
 }
 
 .image-slider-button {
@@ -24,8 +28,10 @@
 
 .numeric-buttons:hover,
 .image-slider-button:hover {
-  background-color: #c3cbd6;
+  background-color: #fff;
   cursor: pointer;
+  color: #d05663;
+  transition: all 0.5s;
 }
 
 .numeric-buttons {
@@ -36,4 +42,8 @@
   padding: 10px;
   color: #fff;
   font-weight: bolder;
+}
+
+.description-author {
+  color: #fff;
 }
